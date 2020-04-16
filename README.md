@@ -1,8 +1,9 @@
 # Calculator
 
-Made with HTML, CSS, JavaScript
-
 View calculator demo below:
+ https://harryminnie6.github.io/Calculator/.
+
+Made with HTML, CSS, JavaScript
 
 Known Issues:
 1.) Bracket button not functional yet
