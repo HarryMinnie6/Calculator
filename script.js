@@ -100,7 +100,7 @@ function mathsPart(event){
             evaluateString.push(pendingValue);
             evaluateString.push('-')            
         break;         
-        case 'x':
+        case 'X':
             pendingValue = displayValue;
             displayValue='0'
             displayValueElement.innerText = displayValue
