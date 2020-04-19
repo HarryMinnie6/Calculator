@@ -16,6 +16,7 @@ let clearBtn = document.querySelector('#clear-btn')
 let backspaceBtn = document.querySelector('#backspace-btn')
 let displayValueElement = document.querySelector('#display-value')
 
+
 //variables to be able to loop over all the buttons
 const numberButtons = document.getElementsByClassName('number-btn')
 const operationButtons = document.getElementsByClassName('operation-btn')
@@ -114,6 +115,14 @@ function mathsPart(event){
             evaluateString.push(pendingValue);
             evaluateString.push('/')            
         break;
+             case '%':
+                evaluateString.push(displayValue);
+                let percentage =  eval(evaluateString.join(''))  
+                displayValue = percentage * 100
+                displayValueElement.innerText = `${displayValue}%`       
+                evaluateString =  [];
+                displayValue='0'           
+        break;
         case '=':
             evaluateString.push(displayValue);
             let evaluation =  eval(evaluateString.join(''))  
@@ -124,6 +133,31 @@ function mathsPart(event){
         break;                                                         
      }
  }
+
+
+ 
+
+
+
+
+
+
+// let bracketsBtn = document.querySelector('#brackets-btn')
+
+// let includesBracket = false;
+
+//     function brackets(){
+//         var prac;
+//         if(includesBracket){
+//             prac = "("
+//         } else {
+//             prac = ")"
+//         };   
+//         includesBracket = !includesBracket;
+//         displayValue+=prac;
+//         displayValueElement.innerText = displayValue
+    
+// }
 
 
 
